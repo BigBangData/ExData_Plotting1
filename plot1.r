@@ -5,6 +5,6 @@ hpc <- subset(read.table("./exdata_data_household_power_consumption/household_po
 hpc$DateTime <- strptime(paste(hpc$Date, hpc$Time), "%d/%m/%Y %H:%M:%S")
 
 ## creates plot 1 
-hist(hpc[, 1], main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red") 
+hist(hpc[, 3], main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red") 
 dev.copy(png, file = "plot1.png", width = 480, height = 480) 
 dev.off()
